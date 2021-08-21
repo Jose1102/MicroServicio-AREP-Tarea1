@@ -1,6 +1,11 @@
 package edu.escuelaing.arep.microservicio;
 import static spark.Spark.*;
 
+
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.io.IOException;
 import spark.Request;
 import spark.Response;
 
@@ -21,6 +26,8 @@ public class App
         staticFiles.location("/public");
         get("/inputdata", (req, res) -> inputDataPage());
         get("/results", (req, res) -> resultsPage(req, res));
+        get("/conexion","aplication/json", (req, res) -> conexion(req, res));
+        
     }
 
     
@@ -50,7 +57,24 @@ public class App
         return req.queryParams("firstname") + " " +
                 req.queryParams("lastname");
     }
-
+    
+    private static String conexion(Request req, Response res) {
+    	String response = "None";
+    	String stock = req.queryParams("st");
+    	HttpStockService stockService = CurrentServiceInstance.getInstance().getService();
+    	if(stock != null && stock != "") {
+    		stockService.setStock(stock);
+    	}
+    	try {
+			response = stockService.timeSeriesDaily();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	return response;
+    	
+    }
     
     static int getPort() {
         if (System.getenv("PORT") != null) {

@@ -12,6 +12,7 @@ peticion
 		const jsonString = datos[valor];
 		const respuesta = JSON.stringify(jsonString);
 		ReactDOM.render(respuesta, divRoot);
+		console.log(datos);
 		console.log(JSON.stringify(jsonString))
 	})
 	.catch(console.warn);

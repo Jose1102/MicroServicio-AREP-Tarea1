@@ -8,7 +8,7 @@ function getValueInput() {
 	const divRoot = document.querySelector('#root');
 
 	const divTabla = document.querySelector('#tablaIdentificador');
-	const abb = <h1>Microservicio!</h1>
+	const abb = <h1 class="text-uppercase">Microservicio!</h1>
 
 
 	console.log('Entraaa ' + symbolTemporal)

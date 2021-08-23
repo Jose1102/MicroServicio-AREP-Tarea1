@@ -10,15 +10,15 @@ import spark.Request;
 import spark.Response;
 
 /**
- * Hello world!
+ * Clase principal del micro servicio
+ * @author Jose Maria Castro Ortega
  *
  */
 public class App 
 {
 	/**
-     * This main method uses SparkWeb static methods and lambda functions to
-     * create a simple Hello World web app. It maps the lambda function to the
-     * /hello relative URL.
+     * Esta es el main de App donde realiza el llamado de los get
+     * @param args que es una lista de String
      */
 	public static void main(String[] args) {
         //get("/hello", (req, res) -> "Hello World");
@@ -31,7 +31,10 @@ public class App
     }
 
     
-    
+   /**
+    * Metodo que muestra formulario en pagina html
+    * @return un string que representa una pagina html
+    */
    private static String inputDataPage() {
         String pageContent
                 = "<!DOCTYPE html>"
@@ -53,11 +56,24 @@ public class App
         return pageContent;
     }
 
+   /**
+    * Resultado del formulario
+    * @param req que es el requerimiento recibido
+    * @param res que es el response a enviar
+    * @return un String con el firstname y lastname del request
+    */
     private static String resultsPage(Request req, Response res) {
         return req.queryParams("firstname") + " " +
                 req.queryParams("lastname");
     }
     
+    
+    /**
+     * Metodo que llama un objeto de tipo JSON
+     * @param req que es el requerimiento recibido
+     * @param res que es el response a enviar
+     * @return un String de tipo JSON
+     */
     private static String conexion(Request req, Response res) {
     	String response = "None";
     	String stock = req.queryParams("st");
@@ -76,6 +92,10 @@ public class App
     	
     }
     
+    /**
+     * Metodo que muesta el puerto
+     * @return un numero que es el puerto
+     */
     static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));

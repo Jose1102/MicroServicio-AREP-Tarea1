@@ -3,16 +3,28 @@ package edu.escuelaing.arep.microservicio;
 
 
 import java.io.InputStreamReader;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.io.BufferedReader;
+
+/**
+ * Clase HttpStockService que abre un objeto tipo Http que recorre un String de tipo JSON 
+ * @author Jose Maria Castro Ortega 
+ *
+ */
 
 public abstract class HttpStockService {
 
     private static final String USER_AGENT = "Mozilla/5.0";
     
 
+    /**
+     * Metodo que crea y recorre un objeto tipo Http
+     * @return un String que es el JSON
+     * @throws IOException
+     */
     public String timeSeriesDaily() throws IOException {
     	
     	String responseStr = "Nule";
@@ -48,8 +60,17 @@ public abstract class HttpStockService {
         return responseStr;
     }
     
+    /**
+     * Metodo abstracto que obtiene un String que es la URL
+     * @return un String que es la URL
+     */
     abstract public String getUrl();
     
+    
+    /**
+     * Metodo set que cambia el valor del symbol del objeto JSON
+     * @param stock que es el valor al symbol a cambiar
+     */
     abstract public void setStock(String stock);
 
 }

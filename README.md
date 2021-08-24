@@ -17,7 +17,6 @@
 - [Enunciado](#enunciado).
 - [Comenzando](#comenzando-).
 - [Ejecutando las pruebas](#ejecutando-las-pruebas)
-- [Latex](#latex)
 - [Diagrama de clases](#diagrama-de-clases-).
 - [Productividad](#productividad).
 - [Javadoc](#javaDoc-).
@@ -73,9 +72,6 @@ fb
 GOOG
 ```
 ![fb](https://github.com/Jose1102/MicroServicio-AREP-Tarea1/blob/master/images/GOOG.PNG)
-
-
-## Latex
 
 
 ## Ejecutando las pruebas

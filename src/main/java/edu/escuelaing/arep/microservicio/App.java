@@ -35,7 +35,7 @@ public class App
     * Metodo que muestra formulario en pagina html
     * @return un string que representa una pagina html
     */
-   private static String inputDataPage() {
+   public static String inputDataPage() {
         String pageContent
                 = "<!DOCTYPE html>"
                 + "<html>"
@@ -62,7 +62,7 @@ public class App
     * @param res que es el response a enviar
     * @return un String con el firstname y lastname del request
     */
-    private static String resultsPage(Request req, Response res) {
+    public static String resultsPage(Request req, Response res) {
         return req.queryParams("firstname") + " " +
                 req.queryParams("lastname");
     }
@@ -96,7 +96,7 @@ public class App
      * Metodo que muesta el puerto
      * @return un numero que es el puerto
      */
-    static int getPort() {
+    public static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
         }

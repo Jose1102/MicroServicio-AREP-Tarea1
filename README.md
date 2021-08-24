@@ -85,7 +85,7 @@ GOOG
 mvn test
 ```
 
-![Test](https://github.com/Jose1102/PicasYFamasGame/blob/master/images/tests.PNG)
+![Test](https://github.com/Jose1102/MicroServicio-AREP-Tarea1/blob/master/images/test.PNG)
 
 ## Diagrama de clases 📖
 

@@ -57,14 +57,6 @@ mvn package
 
 3. Ejecutar el proyecto 
 
-### Ejercicio 1
-
-
-## Latex
-
-
-## Ejecutando las pruebas
-
 Al momento de ejecutar el proyecto y abrir el despliegue podremos buscar por medio del identificador symbol. Por ejemplo podriamos buscar por:
 
 ```
@@ -81,6 +73,14 @@ fb
 GOOG
 ```
 ![fb](https://github.com/Jose1102/MicroServicio-AREP-Tarea1/blob/master/images/GOOG.PNG)
+
+
+## Latex
+
+
+## Ejecutando las pruebas
+
+
 
 
 1. Compilar pruebas
